@@ -1,0 +1,80 @@
+@import url('../colors.css');
+
+:root {
+/* Toolbar */
+--toolbar-bgcolor: var(--dark-base) !important;
+
+/* Toolbar Text */
+--toolbar-color: var(--light-1) !important;
+
+/* Buttons */
+--toolbarbutton-hover-background: var(--foreground) !important;
+--toolbarbutton-active-background: var(--color1) !important;
+--toolbarbutton-border-radius: 8px !important;
+
+}
+
+.titlebar-spacer {
+  display: none !important;
+}
+
+/* NAV BAR ------------------------------------------------- */
+
+#nav-bar {
+
+  min-height: 26px !important;
+  height: 26px !important;
+  box-shadow: none !important;
+  padding-inline: 6px 6px !important;
+  padding: 4px !important;
+  background-color: var(--color0) !important;
+  transition: min-height 0.3s ease 0.1s !important;
+}
+
+#nav-bar:hover {
+  min-height: 42px !important;
+}
+
+/* Remove line between website content and top bar */
+
+#navigator-toolbox {
+  border-bottom: var(--firefoxcss-top-bar-border-bottom-size) solid
+    var(--firefoxcss-top-bar-border-bottom-color) !important;
+}
+
+#tabbrowser-tabpanels {
+  background-color: var(--color0) !important;
+}
+
+toolbar .toolbarbutton-1 {
+  background: transparent !important;
+}
+
+toolbar .toolbarbutton-1 > .toolbarbutton-icon {
+  border-radius: 8px !important;
+  padding: 8px !important;
+}
+
+/* Auto hide icons on the Nav Bar */
+#nav-bar > #nav-bar-customization-target *:not(#urlbar-container):not(#urlbar-container *),
+#PanelUI-button {
+    opacity: 0 !important;
+    transition: opacity 0.7s ease !important;
+}
+
+#nav-bar:hover > #nav-bar-customization-target *:not(#urlbar-container):not(#urlbar-container *),
+#nav-bar:hover > #PanelUI-button  {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+/* Icons color */
+
+toolbar .toolbarbutton-1 {
+  fill: var(--color3) !important;
+}
+
+.toolbarbutton-1[checked="true"] > .toolbarbutton-icon {
+  background: transparent !important;
+  fill: var(--color3);
+}

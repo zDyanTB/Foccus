@@ -1,0 +1,107 @@
+/*============================================================================================*/
+/* SIDE BAR 2 (FLOORP) */
+
+@import url('../colors.css');
+
+/* Make splitter invisible */ 
+
+#sidebar-splitter2 {
+  appearance: none !important;
+  width: 10px !important;;  /* Set initial width */
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;  /* Add transitions */
+}
+
+#sidebar-splitter2:hover {
+  width: 20px !important;  /* Width on hover */
+  opacity: 1;  /* Opacity on hover */
+}
+
+/*------------------------------------------------*/
+/* Hide Floorp sidebar header */
+
+#sidebar2-header  {
+    max-height: 0.5em !important;
+    min-height: 0.5em !important;
+    opacity: 0 !important;
+    transition: max-height 0.3s ease-in-out, min-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#sidebar2-header:hover  {
+    max-height: 2.5em !important;
+    min-height: 2.5em !important;
+    opacity: 1 !important;
+}
+
+/* Floorp sidebar open tab */
+
+#sidebar2-box browser {
+    border-radius: 15px !important;
+    margin: 12px 4px 6px 4px !important;
+    box-shadow: 0 0 6px 2px rgba(0,0,0,0.4);
+}
+
+/* Floorp hover sidebar */
+
+#sidebar-select-box {
+    --sidebar-width: 12px;
+    --sidebar-hover-width: 56px;
+  
+    opacity: 0;
+    z-index: 1;
+    position: relative;
+    min-width: var(--sidebar-width) !important;
+    width: var(--sidebar-width) !important;
+    transition: min-width 0.3s ease, opacity 0.2s ease !important;
+  }
+  
+  #sidebar-select-box:hover {
+    opacity: 1;
+    transition-delay: 0.1s !important; 
+    min-width: var(--sidebar-hover-width) !important;
+  }
+  
+
+/* Floorp Sidebar Border */
+
+@media (prefers-color-scheme: dark) {
+
+    #sidebar-select-box {
+        margin: 4px !important;
+        border-radius: 12px !important;
+        align-items: center !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+}
+/*------------------------------------------------*/
+/* Floorp Sidebar Select Box Styling */
+
+.sidepanel-icon {
+    border-radius: 8px !important;
+    fill: var(--color3) !important;
+}
+
+/* Workspace active */
+.sidepanel-icon[selected="true"] {
+    border-radius: 0 8px 8px 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-left: 2px solid var(--color2) !important;
+}
+
+.sidepanel-icon:hover {
+    background: var(--foreground) !important;
+}
+
+/*------------------------------------------------*/
+/* Hide random stuff coming out of Floorp Sidebar */
+
+.browser-sidebar2 {
+    border: none !important;
+    border-bottom: none !important;
+}
+
+#sidebar2-box[style="min-width: 0px; order: 6; width: 415px; max-width: 0px;"] > * {
+    display: none !important;
+}
