@@ -1,16 +1,6 @@
 @import url('../colors.css');
 
 /* URL BAR ------------------------------------------------*/
-:root {
-
-  /* icons */
-  --lwt-toolbarbutton-icon-fill: var(--foreground) !important;
-
-  /* icons_attention */
-  --lwt-toolbarbutton-icon-fill-attention: var(--foreground) !important;
-
-}
-
 /* URL bar hover and focus */
 #urlbar {
     min-height: 32px !important;
