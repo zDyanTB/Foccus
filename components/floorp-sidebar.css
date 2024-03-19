@@ -77,20 +77,23 @@
 /*------------------------------------------------*/
 /* Floorp Sidebar Select Box Styling */
 
-.sidepanel-icon {
+.sidepanel-icon,
+.sidepanel-browser-icon {
     border-radius: 8px !important;
     fill: var(--color3) !important;
 }
 
 /* Workspace active */
-.sidepanel-icon[selected="true"] {
+.sidepanel-icon[selected="true"],
+.sicon-list[checked="true"] {
     border-radius: 0 8px 8px 0 !important;
     background: transparent !important;
     box-shadow: none !important;
     border-left: 2px solid var(--color2) !important;
 }
 
-.sidepanel-icon:hover {
+.sidepanel-icon:hover,
+.sidepanel-browser-icon:hover {
     background: var(--foreground) !important;
 }
 
