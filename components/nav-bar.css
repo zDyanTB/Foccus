@@ -78,3 +78,9 @@ toolbar .toolbarbutton-1 {
   background: transparent !important;
   fill: var(--color3);
 }
+
+
+/* Extensions badge text */
+toolbar .toolbarbutton-1 > .toolbarbutton-badge-stack {
+  color: var(--background) !important;
+}
