@@ -23,13 +23,27 @@
     max-height: 0.5em !important;
     min-height: 0.5em !important;
     opacity: 0 !important;
-    transition: max-height 0.3s ease-in-out, min-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height 0.3s ease, min-height 0.3s ease, opacity 0.2s ease;
 }
 
 #sidebar2-header:hover  {
     max-height: 2.5em !important;
     min-height: 2.5em !important;
     opacity: 1 !important;
+}
+
+.sidebar2-icon {
+  min-width: 28px !important;
+  min-height: 28px !important;
+  border-radius: 8px !important;
+  padding: 6px !important;
+  border: none !important;
+  box-shadow: none !important;
+  fill: var(--color3) !important;
+}
+
+.sidebar2-icon:hover {
+  background: var(--foreground) !important;
 }
 
 /* Floorp sidebar open tab */
