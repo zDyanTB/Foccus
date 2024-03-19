@@ -3,15 +3,6 @@
 /* URL BAR ------------------------------------------------*/
 :root {
 
-  /* Background color */
-  /* --toolbar-field-background-color: transparent !important; */
-
-  
-  /* --toolbar-field-focus-background-color: transparent !important; */
-
-  /* hover color */
-  /* --lwt-toolbar-field-color: blue !important;     */
-
   /* icons */
   --lwt-toolbarbutton-icon-fill: var(--foreground) !important;
 
@@ -23,16 +14,18 @@
 /* URL bar hover and focus */
 #urlbar {
     min-height: 32px !important;
-    border: 1px solid transparent !important;
     box-shadow: none !important;
     background-color: transparent !important;
     color: var(--foreground) !important;
     border-radius: 8px !important;
-    transition: border 0.3s ease  0.2s !important;
+}
+
+#urlbar-background {
+  transition: border 0.3s ease 0.1s !important;  
 }
 
 #urlbar:hover:not([focused]) > #urlbar-background {
-  border: 1px solid var(--color2) !important;
+  border: 1px solid var(--color3) !important;
 }
 
 #urlbar[focused="true"] > #urlbar-background {
@@ -62,7 +55,7 @@
   > #page-action-buttons
   .urlbar-page-action {
   opacity: 0;
-  transition-delay: 500ms;
+  transition-delay: 0.5s;
 }
 
 /* Remove border between URL bar input and suggestions. */
@@ -79,7 +72,7 @@
   > #identity-box
   > #identity-permission-box:not([open]) {
   opacity: 0;
-  transition-delay: 500ms;
+  transition-delay: 0.5s;
 }
 
 #page-action-buttons .urlbar-page-action,
@@ -92,7 +85,7 @@
 #urlbar #identity-permission-box {
   opacity: 0 !important;
   margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
-  transition: margin-inline-start 0.3s linear, opacity 200ms linear;
+  transition: margin-inline-start 0.3s ease, opacity 0.2s ease;
 }
 
 #urlbar #identity-box.notSecureText #identity-icon-box {
@@ -124,7 +117,7 @@
 #page-action-buttons .urlbar-page-action {
   margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
   opacity: 0;
-  transition: margin-inline-end 0.3s linear, opacity 200ms linear;
+  transition: margin-inline-end 0.3s ease, opacity 0.2s ease;
 }
 
 #page-action-buttons:hover > .urlbar-page-action,

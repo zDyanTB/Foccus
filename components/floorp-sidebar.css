@@ -100,7 +100,7 @@
 /* Workspace active */
 .sidepanel-icon[selected="true"],
 .sicon-list[checked="true"] {
-    border-radius: 0 8px 8px 0 !important;
+    border-radius: 2px 8px 8px 2px !important;
     background: transparent !important;
     box-shadow: none !important;
     border-left: 2px solid var(--color2) !important;

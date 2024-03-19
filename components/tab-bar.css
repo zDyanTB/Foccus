@@ -76,7 +76,7 @@ tab:not([selected]) .tab-icon-image {
 /* Active tab */
 tab[selected="true"] > .tab-stack > .tab-background {
     border-radius: 8px 8px 2px 2px !important;
-    border-bottom: 2px solid var(--color2) !important;
+    border-bottom: 2px solid var(--color3) !important;
 }
 
 tab[selected="true"] > .tab-stack .tab-label-container {
