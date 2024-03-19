@@ -1,7 +1,39 @@
-/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
-   https://github.com/Godiesc/opera-gx */  
+@import url('colors.css');
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home),url(about:privatebrowsing) {  
+    body{
+        background-size: cover !important;
+        background-image: url("components/wallpaper.png")!important;
+        --newtab-background-color: #000000 !important;
+        --newtab-background-color-secondary: #000000 !important;
+    }
 
-@import url(components/one_root-personal.css);
-@import url(components/one_UC-newtabpage.css);
-@import url(components/one_UC-settings-addons-pages.css);
-@import url(components/one_UC-addons-store.css);
+  /* removing watermark and logo */
+  .logo-and-wordmark{
+    opacity: 0;
+  }
+
+  #searchSuggestionTable{
+    opacity: 0;
+  }
+
+    /* search border gradient */
+  .search-inner-wrapper{
+      margin-top: 320px !important;
+      border-radius: 16px;
+      border: 1px solid var(--color3);
+      backdrop-filter: blur(8px);
+      background: transparent !important;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      overflow: hidden;
+      border-collapse: separate; 
+    }
+
+  .search-inner-wrapper:active {
+    border: none !important;
+  }
+
+  #newtab-search-text{
+      opacity: 60% !important;
+  }
+}
