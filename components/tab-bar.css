@@ -65,8 +65,8 @@ tab:not([selected="true"]) > .tab-stack:hover .tab-close-button {
 }
 
 .close-icon {
-  color: var(--color2) !important;
-  fill: var(--foreground) !important;
+  color: var(--foreground) !important;
+  fill: var(--color3) !important;
 }
 
 tab:not([selected]) .tab-icon-image {
@@ -87,5 +87,22 @@ tab[selected="true"] > .tab-stack .tab-label-container {
 #main-window #tabContextMenu menuseparator,
 #main-window #context_openANewTab {
    display: none !important;
-} 
- 
+}
+
+#alltabs-button,
+#firefox-view-button {
+  display: none !important;
+}
+
+/* Tab bar close window */
+.titlebar-button {
+  border-radius: 8px !important;
+}
+
+.toolbarbutton-icon {
+  stroke: var(--color3) !important;
+}
+
+.titlebar-close:hover {
+  background: var(--foreground) !important;
+}
