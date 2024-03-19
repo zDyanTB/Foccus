@@ -4,6 +4,29 @@
     background: var(--background) !important;
 }
 
+/* Pinned tab */
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([pinned]) .tab-background:not([selected]) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Remove actual workspaces text */
+#workspaces-toolbar-button > .toolbarbutton-text {
+  display: none !important;
+}
+
+/* Workspace icon */
+#workspaces-toolbar-button > * {
+  border-radius: 8px 8px 2px 2px !important;
+  border-bottom: 2px solid rgba(255,255,255,.1) !important;
+  margin-left: 4px !important;
+}
+
+/* Remove actual workspace right-border */
+#tabbrowser-tabs {
+  border: none !important;
+}
+
 .tabbrowser-tab::after {
     border: none !important;
 }
@@ -16,7 +39,7 @@
 .tab-background {
     outline: none !important;
     box-shadow: none !important;
-    background:transparent !important;
+    background: transparent !important;
 }
 
 tab,
@@ -38,15 +61,21 @@ tab:not([selected="true"]) .tab-stack .tab-close-button {
 
 tab:not([selected="true"]) > .tab-stack:hover .tab-close-button {
   opacity: 1 !important;
+
+}
+
+.close-icon {
+  color: var(--color2) !important;
+  fill: var(--foreground) !important;
 }
 
 tab:not([selected]) .tab-icon-image {
     opacity: 0.4 !important;
 }
 
-
 /* Active tab */
 tab[selected="true"] > .tab-stack > .tab-background {
+    border-radius: 8px 8px 2px 2px !important;
     border-bottom: 2px solid var(--color2) !important;
 }
 
@@ -60,13 +89,3 @@ tab[selected="true"] > .tab-stack .tab-label-container {
    display: none !important;
 } 
  
-/* Pinned tab */
-#TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([pinned]) .tab-background:not([selected]) {
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-
-/* New tab button */
-#tabs-newtab-button, #TabsToolbar #new-tab-button {
-    fill: var(--color3) !important;
-}
