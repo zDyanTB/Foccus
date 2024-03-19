@@ -9,11 +9,9 @@
 @import url('components/bookmarks.css');
 @import url('components/page-window.css');
 @import url('components/popup.css');
-
+@import url('components/new-tab.css');
 
 /* @import url('components/one_urlbar-searchbar.css'); */
-@import url('components/one_UC-newtabpage.css');
-@import url('components/one_UC-addons-store.css');
 @import url('config.css');
 @import url('variables.css');
 
