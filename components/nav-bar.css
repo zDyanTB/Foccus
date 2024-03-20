@@ -38,6 +38,7 @@
 /* Remove line between website content and top bar */
 
 #navigator-toolbox {
+  background: var(--background) !important;
   border-bottom: var(--firefoxcss-top-bar-border-bottom-size) solid
     var(--firefoxcss-top-bar-border-bottom-color) !important;
 }

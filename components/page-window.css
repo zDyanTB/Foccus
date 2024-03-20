@@ -1,21 +1,17 @@
 /* Browser Border */
+@import url('../colors.css');
 
-@media (prefers-color-scheme: dark) {
-  #main-window:not([sizemode="fullscreen"]) #appcontent browser {
-      border-radius: 18px 0 0 0 !important;
-      margin: 0 !important;
-      border: 1px solid transparent;
-      box-shadow: 0 0 8px 3px rgba(0,0,0,0.4);
-      clip-path: circle(80%) !important;
-  }
+#main-window:not([sizemode="fullscreen"]) #appcontent browser {
+  border-radius: 18px 0 0 0 !important;
+  margin: 0 !important;
+  border: 1px solid transparent;
+  box-shadow: 0 0 8px 2px rgba(0,0,0,0.4);
+  clip-path: circle(80%) !important;
 
-@media (prefers-color-scheme: light)  {
-  #main-window:not([sizemode="fullscreen"]) #appcontent browser {
-      border-radius: 18px 0 0 0 !important;
-      margin: 0 !important;
-      border: 1px solid transparent;
-      box-shadow: 0 0 8px 3px rgba(255,255,255,0.4);
-      clip-path: circle(80%) !important;
-  }
+}
 
+#appcontent,
+#browser {
+  background-color: var(--background) !important;
+  color: var(--text-color);
 }

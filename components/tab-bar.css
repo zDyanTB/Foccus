@@ -1,7 +1,10 @@
 @import url('../colors.css');
 
-#TabsToolbar {
-    background: var(--background) !important;
+#TabsToolbar,
+#tabbrowser-tabbox,
+#tabbrowser-tabpanels {
+  background-color: var(--color0) !important;
+  color: var(--text-color);
 }
 
 /* Pinned tab */

@@ -8,6 +8,9 @@
 
 #unified-extensions-panel #unified-extensions-view {
     width: 100% !important;
+    background-color: var(--color0) !important;
+    color: var(--text-color);
+
 }
 
 

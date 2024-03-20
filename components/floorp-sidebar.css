@@ -66,27 +66,21 @@
     min-width: var(--sidebar-width) !important;
     width: var(--sidebar-width) !important;
     transition: min-width 0.3s ease, opacity 0.2s ease !important;
-  }
+}
   
-  #sidebar-select-box:hover {
+#sidebar-select-box:hover {
     opacity: 1;
     transition-delay: 0.1s !important; 
     min-width: var(--sidebar-hover-width) !important;
-  }
-  
+}
 
 /* Floorp Sidebar Border */
-
-@media (prefers-color-scheme: dark) {
-
-    #sidebar-select-box {
-        margin: 4px !important;
-        border-radius: 12px !important;
-        align-items: center !important;
-        border: none !important;
-        background: transparent !important;
-    }
-
+#sidebar-select-box {
+    margin: 4px !important;
+    border-radius: 12px !important;
+    align-items: center !important;
+    border: none !important;
+    background: transparent !important;
 }
 /*------------------------------------------------*/
 /* Floorp Sidebar Select Box Styling */
@@ -115,6 +109,7 @@
 /* Hide random stuff coming out of Floorp Sidebar */
 
 .browser-sidebar2 {
+    background: transparent !important;
     border: none !important;
     border-bottom: none !important;
 }

@@ -4,18 +4,16 @@
 @import url('components/floorp-sidebar.css');
 @import url('components/nav-bar.css');
 @import url('components/url-bar.css');
+@import url('components/floating-url-bar.css');
 @import url('components/tab-bar.css');
 @import url('components/compact-extensions.css');
 @import url('components/bookmarks.css');
 @import url('components/page-window.css');
 @import url('components/popup.css');
-@import url('components/new-tab.css');
+@import url('components/find-bar.css');
 
-/* @import url('components/one_urlbar-searchbar.css'); */
 @import url('config.css');
 @import url('variables.css');
-
-/* @import url('components/colored_soundplaying_tab.css'); */
 
 /*------------------------------------------------*/
 /* Background Color */
@@ -34,33 +32,6 @@
     --text-color:                  var(--foreground);
     --border-color:                var(--selected);
   }
-
-  #navigator-toolbox,
-  #sidebar2-box,
-  #tabbrowser-tabbox,
-  #tabbrowser-tabpanels,
-  #browser,
-  #appcontent,
-  #navigator-toolbox,
-  #PersonalToolbar,
-  #unified-extensions-panel #unified-extensions-view,
-  .browser-sidebar2 {
-    background-color: var(--color0) !important;
-    color: var(--text-color);
-  }
-
-}
-
-:root {
-/* toolbar_bottom_separator */
---toolbar-field-focus-background-color: red !important;
-
---toolbox-border-bottom-color: transparent !important; /* legacy */
---chrome-content-separator-color: transparent !important;
-
-/* Buttons in general */
---button-hover-bgcolor: var(--color3) !important;
---button-bgcolor: transparent !important;
 
 }
 
