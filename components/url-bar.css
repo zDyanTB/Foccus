@@ -9,11 +9,7 @@
     border-radius: 8px !important;
 }
 
-#urlbar:hover:not([focused]) > #urlbar-background {
-  border: 1px solid var(--color3) !important;
-}
 /* Appearance for URL bar. */
-
 #urlbar-background,
 #searchbar {
   transition: border 0.3s linear 0.1s !important;  
@@ -22,11 +18,7 @@
   background: transparent !important;
 }
 
-.urlbarView-url {
-  color: var(--color2) !important;
-}
 /* Hide and Hover icons in URL Bar */
-
 #nav-bar:not([customizing="true"]):not(.searchButton)
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
@@ -120,6 +112,21 @@
 #page-action-buttons:not(:hover) #translations-button[translationsactive="true"]:not([open]) {
   visibility:collapse !important;
 } 
+
+/* Search mode background and indicator */
+#urlbar-search-mode-indicator {
+  background: rgba(255,255,255,.1) !important;
+}
+
+#urlbar-search-mode-indicator::before {
+    content: "";
+    position: relative;
+    left: -6px;
+    height: 60%;
+    width: 4px;
+    background-color: var(--color3);
+    border-radius: 6px;
+}
 
 /* Create visual dots on both sides */
 
