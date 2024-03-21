@@ -13,8 +13,6 @@
     box-shadow: none !important;
 }
 
-
-
 /* Remove actual workspaces text */
 #workspaces-toolbar-button > .toolbarbutton-text {
   display: none !important;
@@ -103,15 +101,20 @@ tab[selected="true"] > .tab-stack .tab-label-container {
 #firefox-view-button {
   display: none !important;
 }
+
 /* Tab bar close window */
-.titlebar-button {
+#TabsToolbar .toolbarbutton-1,
+#TabsToolbar .titlebar-close {
+  opacity: 0 !important;
   border-radius: 8px !important;
+  transition: opacity 0.3s ease !important;
 }
 
-.toolbarbutton-icon {
+#TabsToolbar:hover .toolbarbutton-1,
+#TabsToolbar:hover .titlebar-close {
+  opacity: 1 !important;
+}
+
+#TabsToolbar .toolbarbutton-icon {
   stroke: var(--color3) !important;
-}
-
-.titlebar-close:hover {
-  background: var(--foreground) !important;
 }
