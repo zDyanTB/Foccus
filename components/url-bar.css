@@ -9,10 +9,6 @@
     border-radius: 8px !important;
 }
 
-#urlbar-background {
-  transition: border 0.4s ease 0.1s !important;  
-}
-
 #urlbar:hover:not([focused]) > #urlbar-background {
   border: 1px solid var(--color3) !important;
 }
@@ -20,8 +16,9 @@
 
 #urlbar-background,
 #searchbar {
+  transition: border 0.3s linear 0.1s !important;  
   border-radius: 8px !important;
-  border: transparent !important;
+  border: 1px solid transparent !important;
   background: transparent !important;
 }
 
