@@ -13,6 +13,8 @@
     box-shadow: none !important;
 }
 
+
+
 /* Remove actual workspaces text */
 #workspaces-toolbar-button > .toolbarbutton-text {
   display: none !important;
@@ -24,6 +26,7 @@
   border-bottom: 2px solid rgba(255,255,255,.1) !important;
   margin-left: 4px !important;
 }
+
 
 /* Remove actual workspace right-border */
 #tabbrowser-tabs {
@@ -73,17 +76,29 @@ tab:not([selected="true"]) > .tab-stack:hover .tab-close-button {
 }
 
 tab:not([selected]) .tab-icon-image {
-    opacity: 0.4 !important;
+    opacity: 0.3 !important;
 }
 
 /* Active tab */
 tab[selected="true"] > .tab-stack > .tab-background {
-    border-radius: 8px 8px 2px 2px !important;
-    border-bottom: 2px solid var(--color3) !important;
+  background-color: rgba(255,255,255,.1) !important;
 }
 
+/* Text */
 tab[selected="true"] > .tab-stack .tab-label-container {
     color: white !important;
+}
+
+.tab-content[selected="true"]::before {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 80%;
+    background-color: var(--color3);
+    border-radius: 6px;
 }
 
 .tabbrowser-tab[selected="true"] .tab-close-button,
@@ -96,7 +111,6 @@ tab[selected="true"] > .tab-stack .tab-label-container {
 #firefox-view-button {
   display: none !important;
 }
-
 /* Tab bar close window */
 .titlebar-button {
   border-radius: 8px !important;
