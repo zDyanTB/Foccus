@@ -3,6 +3,7 @@
 
 @import url('../colors.css');
 
+/*------------------------------------------------*/
 /* Make splitter invisible */ 
 
 #sidebar-splitter2 {
@@ -54,6 +55,7 @@
     box-shadow: 0 0 6px 2px rgba(0,0,0,0.4);
 }
 
+/*------------------------------------------------*/
 /* Floorp hover sidebar */
 
 #sidebar-select-box {
@@ -89,20 +91,45 @@
 .sidepanel-browser-icon {
     border-radius: 8px !important;
     fill: var(--color3) !important;
+    transition: all 0.2s linear !important;
 }
 
-/* Workspace active */
-.sidepanel-icon[selected="true"],
-.sicon-list[checked="true"] {
-    border-radius: 2px 8px 8px 2px !important;
-    background: transparent !important;
+/*------------------------------------------------*/
+/* Buttons selected */
+
+/* Trick to show in the site icons */
+.webpanel-icon[checked="true"]::before {
+  content: "" !important;
+  display: inline !important;
+  opacity: 1 !important;
+  background: var(--color3) !important;
+  position: absolute;
+  top: auto !important;
+  left: 1px !important;
+  height: 60%;
+  width: 4px;
+  background-color: var(--color3);
+}
+
+toolbarbutton:where([selected="true"], [checked="true"]) {
+    border-radius: 8px !important;
+    background: rgba(255,255,255,.2) !important;
     box-shadow: none !important;
-    border-left: 2px solid var(--color2) !important;
+}
+
+toolbarbutton:where([checked="true"], [selected="true"])::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    height: 60%;
+    width: 4px;
+    background-color: var(--color3);
+    border-radius: 6px;
 }
 
 .sidepanel-icon:hover,
 .sidepanel-browser-icon:hover {
-    background: var(--foreground) !important;
+    background: color-mix(in srgb, var(--foreground) 80%, rgba(255,255,255,.2)) !important;
 }
 
 /*------------------------------------------------*/
