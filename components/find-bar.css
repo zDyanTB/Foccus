@@ -5,18 +5,17 @@
 
 findbar {
 	order: -1 !important;
-	margin-bottom: -33px !important;
+	/* margin-bottom: -26px !important; */
 	position: relative;
 	border-top: none !important;
 	padding: 0 !important;
-	transition: transform 82ms linear, opacity 82ms linear 32ms !important;
+	transition: all 0.3s ease !important;
 	/*floating findbar Derive findbar background from theme colors https://github.com/MrOtherGuy/firefox-csshacks/commit/2a0f40b305b81b129cc5db6dbffbbe9ff028bc90*/
 	background: none !important;
 	pointer-events: none;
 	z-index: 1;
         white-space: nowrap;
  	}
-}
 
 .findbar-container>.findbar-find-fast {
 	 padding: var(--toolbarbutton-inner-padding) 1px;
@@ -27,14 +26,21 @@ findbar[hidden] {
 	transform: translateY(-36px);
 }
 
-
 findbar>.findbar-container,
 findbar>.close-icon {
-	border: 1px solid #1e1d2d !important;
-	border-width: 0 0 1px 0px !important;
-	background-color: #1e1d2d !important;
-        background-image: linear-gradient(#1e1d2d, #1e1d2d)),var(--lwt-header-image,none);
+	border: none !important;
+	background-color: transparent !important;
+  /* background-image: linear-gradient(#1e1d2d, #1e1d2d)),var(--lwt-header-image,none) !important; */
 	pointer-events: auto;
+}
+
+.findbar-container .checkbox-check {
+  background-color: var(--color2) !important;
+  color: var(--foreground) !important;
+}
+
+.findbar-container .checkbox-check[checked] {
+  background-color: var(--color3) !important;
 }
 
 findbar>.findbar-container {
@@ -55,11 +61,10 @@ findbar>.findbar-container {
 }
 
 .findbar-closebutton {
-	margin: 0 !important;
+	margin: 0 6px 0 0 !important;
 	border-radius: 0 !important;
 	padding: 5px !important;
 	width: initial !important;
-
 }
 
 .findbar-closebutton>image {
@@ -67,7 +72,7 @@ findbar>.findbar-container {
 }
 
 .findbar-closebutton:hover>image {
-	background: dodgerblue !important;
+	background: rgba(255,255,255,.2) !important;
 	border-radius: 4px;
 }
 
@@ -85,4 +90,3 @@ findbar::before {
 	background-color: var(--background) !important;
 	color: var(--foreground) !important;
 }
-
