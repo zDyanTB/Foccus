@@ -98,7 +98,7 @@
 /* Buttons selected */
 
 /* Trick to show in the site icons */
-.webpanel-icon[checked="true"]::before {
+.webpanel-icon::before {
   content: "" !important;
   display: inline !important;
   opacity: 1 !important;
@@ -109,6 +109,9 @@
   height: 60%;
   width: 4px;
   background-color: var(--color3);
+  opacity: 0 !important;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 toolbarbutton:where([selected="true"], [checked="true"]) {
@@ -117,14 +120,24 @@ toolbarbutton:where([selected="true"], [checked="true"]) {
     box-shadow: none !important;
 }
 
-toolbarbutton:where([checked="true"], [selected="true"])::before {
+toolbarbutton::before {
     content: "";
     position: absolute;
     left: 1px;
     height: 60%;
     width: 4px;
-    background-color: var(--color3);
+    background-color: var(--color2);
     border-radius: 6px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.webpanel-icon[checked="true"]::before,
+toolbarbutton:where([checked="true"], [selected="true"])::before {
+  opacity: 1 !important;
+  transform: translateX(0);
+
 }
 
 .sidepanel-icon:hover,
