@@ -79,17 +79,28 @@ tab[selected="true"] > .tab-stack .tab-label-container {
     color: white !important;
 }
 
-.tab-content[selected="true"]::before {
+/* Line below active tab */
+.tab-content::before {
     content: "";
     position: absolute;
     bottom: 4px;
     left: 50%;
-    transform: translateX(-50%);
     height: 4px;
     width: 80%;
-    background-color: var(--color3);
+    background-color: var(--color2);
     border-radius: 6px;
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    transform: translateX(-100%);
 }
+
+/* Reveal it  */
+.tab-content[selected="true"]::before {
+  opacity: 1;
+  transform: translateX(-50%);
+
+}
+
 
 .tabbrowser-tab[selected="true"] .tab-close-button,
 #main-window #tabContextMenu menuseparator,
