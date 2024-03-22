@@ -36,6 +36,8 @@
   left: auto !important;
   right: 0 !important;
   width: 64vw !important;
+  transition: all 0.3s ease;
+
 
   & .urlbarView-results {
     margin-top: 12px !important;
