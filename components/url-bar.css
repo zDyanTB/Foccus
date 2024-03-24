@@ -57,7 +57,7 @@
 #urlbar #identity-permission-box {
   opacity: 0 !important;
   margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
-  transition: margin-inline-start 0.3s ease, opacity 0.2s ease;
+  transition: all 0.3s ease 0.1s; 
 }
 
 #urlbar #identity-box.notSecureText #identity-icon-box {
@@ -89,7 +89,7 @@
 #page-action-buttons .urlbar-page-action {
   margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
   opacity: 0;
-  transition: margin-inline-end 0.3s ease, opacity 0.2s ease;
+  transition: all 0.3s ease 0.1s; 
 }
 
 #page-action-buttons:hover > .urlbar-page-action,
