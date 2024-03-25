@@ -1,4 +1,4 @@
-@import url("colors.css");
+@import url("catppuccin.css");
 :root {
     --button-fill:              var(--color3);
     --selected:                 var(--color2);
@@ -58,6 +58,11 @@
     --urlbar-box-text-color {
       color: var(--color1) !important;
     }
+
+  --urlbarView-highlight-background: var(--selected) !important;
+  --urlbarView-highlight-color: var(--text-selected) !important;
+  --urlbarView-hover-background: var(--selected) !important;
+  --urlbarView-separator-color: transparent !important;
 
   /* Border */
   --toolbar-field-border-color: var(--button-fill) !important;

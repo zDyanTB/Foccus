@@ -1,0 +1,14 @@
+:root {
+    --background: #181825; /* Main color */
+    --foreground:  #cdd6f4; /* Text color */
+    --cursor: #ede1c6;
+
+    --color0: #23232a;
+    --color1: #f5c2e7; /* Links */
+    --color2: #f38ba8; /* Second-accent */
+    --color3: #f5c2e7; /* Main-accent */
+    --color4: #74B8BA;
+    --color5: #A49C92;
+    --color6: #D2B28F;
+    --color7: #a6e3a1; /* Error */
+}
