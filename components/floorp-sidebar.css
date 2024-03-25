@@ -1,14 +1,12 @@
 /*============================================================================================*/
 /* SIDE BAR 2 (FLOORP) */
 
-@import url('../colors.css');
-
 /*------------------------------------------------*/
 /* Make splitter invisible */ 
 
 #sidebar-splitter2 {
   appearance: none !important;
-  width: 10px !important;;  /* Set initial width */
+  width: 10px !important;  /* Set initial width */
   transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;  /* Add transitions */
 }
 
@@ -40,11 +38,6 @@
   padding: 6px !important;
   border: none !important;
   box-shadow: none !important;
-  fill: var(--color3) !important;
-}
-
-.sidebar2-icon:hover {
-  background: var(--foreground) !important;
 }
 
 /* Floorp sidebar open tab */
@@ -90,25 +83,22 @@
 .sidepanel-icon,
 .sidepanel-browser-icon {
     border-radius: 8px !important;
-    fill: var(--color3) !important;
     transition: all 0.2s linear !important;
 }
 
 /*------------------------------------------------*/
 /* Buttons selected */
 
-/* Trick to show in the site icons */
+/* Trick to show active line in the site icons */
 .webpanel-icon::before {
   content: "" !important;
   display: inline !important;
   opacity: 1 !important;
-  background: var(--color3) !important;
   position: absolute;
   top: auto !important;
   left: 1px !important;
   height: 60%;
   width: 4px;
-  background-color: var(--color3);
   opacity: 0 !important;
   transition: all 0.3s ease;
   transform: translateX(-50%);
@@ -116,7 +106,6 @@
 
 toolbarbutton:where([selected="true"], [checked="true"]) {
     border-radius: 8px !important;
-    background: rgba(255,255,255,.2) !important;
     box-shadow: none !important;
 }
 
@@ -126,7 +115,6 @@ toolbarbutton::before {
     left: 1px;
     height: 60%;
     width: 4px;
-    background-color: var(--color2);
     border-radius: 6px;
     opacity: 0;
     transition: all 0.3s ease;
@@ -137,12 +125,6 @@ toolbarbutton::before {
 toolbarbutton:where([checked="true"], [selected="true"])::before {
   opacity: 1 !important;
   transform: translateX(0);
-
-}
-
-.sidepanel-icon:hover,
-.sidepanel-browser-icon:hover {
-    background: color-mix(in srgb, var(--foreground) 80%, rgba(255,255,255,.2)) !important;
 }
 
 /*------------------------------------------------*/

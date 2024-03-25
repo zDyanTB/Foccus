@@ -1,8 +1,9 @@
-@import "colors.css";
+@import url("colors.css");
 :root {
     --button-fill:              var(--color3);
-    --button-hover:             color-mix(in srgb, var(--selected) 20%, transparent);
     --selected:                 var(--color2);
+    --button-hover:             color-mix(in srgb, var(--button-fill) 20%, transparent);
+    --tab-hover:                color-mix(in srgb, var(--selected) 20%, transparent);
     --error:                    var(--color7);
     --white:                    rgba(255,255,255,.2);
 
@@ -29,7 +30,7 @@
 
   /* Icons  */
   --toolbarbutton-hover-background: var(--button-hover) !important;
-  --toolbarbutton-active-background: var(--selected) !important;
+  --toolbarbutton-active-background: var(--tab-hover) !important;
 
   --toolbarbutton-icon-fill: var(--button-fill) !important;
   --toolbarbutton-icon-fill-attention: var(--selected) !important;
@@ -49,13 +50,14 @@
 
   --toolbar-field-background-color: transparent !important;
 
-  /* Expanded */
-  --toolbar-field-focus-background-color: var(--background) !important;
-
   /* Text */
   --toolbar-field-color: var(--text-color) !important;
   --toolbar-field-focus-color: var(--text-color) !important;
-  --urlbar-popup-url-color: var(--selected) !important;
+  --urlbar-popup-url-color: var(--color1) !important;
+    /* Search engine box */
+    --urlbar-box-text-color {
+      color: var(--color1) !important;
+    }
 
   /* Border */
   --toolbar-field-border-color: var(--button-fill) !important;
@@ -65,12 +67,16 @@
   --button-hover-bgcolor: var(--button-hover) !important;
   --button-bgcolor: var(--button-fill) !important;
 
+  /* Expanded */
+  --toolbar-field-focus-background-color: var(--background) !important;
    
   /* Arrow panel ------------------------------------------------- */
 
+    /* Also affects floating urlbar */
   --arrowpanel-background: var(--background) !important;
-  --arrowpanel-dimmed: var(--selected) !important; /* hover color */
+  --arrowpanel-dimmed: var(--button-hover) !important; /* hover color */
   --arrowpanel-dimmed-further: red !important; /* hover color */
+/* --panel-item-active-bgcolor */
 
   --arrowpanel-border-radius: 14px !important;
   
@@ -101,26 +107,26 @@
 
 
 /* Trick to work on floorp sidebar */
-#appcontent,
-#browser {
-  background-color: var(--background) !important;
-  color: var(--text-color);
-}
-/* Text selected */
-::selection {
-  background-color: var(--white) !important;
-  color: var(--button-fill) !important;
-}
+  #appcontent,
+  #browser {
+    background-color: var(--background) !important;
+    color: var(--text-color);
+  }
+  /* Text selected */
+  ::selection {
+    background-color: var(--white) !important;
+    color: var(--button-fill) !important;
+  }
 
 /* Tab bar  -------------------------------------------------------------- */
   /* Hover */
   tab:not([selected="true"]) > .tab-stack:hover > .tab-background {
-    background: var(--button-hover) !important;
+    background: var(--tab-hover) !important;
   }
 
   /* Active tab */
   tab[selected="true"] > .tab-stack > .tab-background {
-    background-color: var(--white) !important;
+    background-color: var(--tab-hover) !important;
   }
   .tab-content::before {
     background-color: var(--selected);
@@ -139,13 +145,50 @@
     fill: var(--button-fill) !important;
   }
 
-/* Extensions -------------------------------------------------------------- */
-#unified-extensions-panel .unified-extensions-item:hover {
-  background: var(--button-hover) !important;
-}
+/* Floating Urlbar ------------------------------------------------------- */
+  #urlbar[focused="true"] > #urlbar-background {
+    background-color: var(--background) !important;
+  }
 
-/* There's some other item behind these so that I cant change the border-radius the right way */
-#unified-extensions-panel .unified-extensions-item {
-  fill: var(--button-fill) !important;
-  border-radius: 8px !important;
-}
+  #urlbar[focused="true"] > #urlbar-background,
+  #urlbar:hover > #urlbar-background {
+    border: 1px solid var(--button-fill) !important;
+  }
+
+
+/* Extensions -------------------------------------------------------------- */
+  #unified-extensions-panel .unified-extensions-item:hover {
+    background: var(--button-hover) !important;
+  }
+
+  /* There's some other item behind these so that I cant change the border-radius the right way */
+  #unified-extensions-panel .unified-extensions-item {
+    fill: var(--button-fill) !important;
+    border-radius: 8px !important;
+  }
+
+/* Floorp sidebar ------------------------------------------------------------ */
+
+  /* Icons */
+    /* Site icons */
+  .webpanel-icon::before,
+  toolbarbutton::before {
+    background-color: var(--selected) !important;
+  }
+
+  toolbarbutton:where([selected="true"], [checked="true"]) {
+    background: var(--tab-hover) !important;
+  }
+
+  .sidepanel-icon,
+  .sidepanel-browser-icon,
+  .sidebar2-icon{
+    fill: var(--button-fill) !important;
+  }
+
+
+  .sidepanel-icon:hover,
+  .sidepanel-browser-icon:hover,
+  .sidebar2-icon:hover {
+   background: var(--button-hover) !important;
+  }

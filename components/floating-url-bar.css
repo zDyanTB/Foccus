@@ -1,18 +1,5 @@
 /* search */
 
-#urlbar[focused="true"] > #urlbar-background {
-  background-color: var(--color0) !important;
-  border: 1px solid var(--color2) !important;
-}
-
-.urlbarView-url {
-  color: var(--color3) !important;
-}
-
-#urlbar:hover:not([focused]) > #urlbar-background {
-  border: 1px solid var(--color3) !important;
-}
-
 #urlbar:is([breakout][breakout-extend]){
 
   #urlbar-input {
@@ -30,13 +17,11 @@
   top: 20vh !important;
   padding-left: 6px !important;
   padding-right: 8px !important;
-  background-color: var(--background) !important;
-  backdrop-filter: blur(30px);
 
   left: auto !important;
   right: 0 !important;
   width: 64vw !important;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in;
 
 
   & .urlbarView-results {
