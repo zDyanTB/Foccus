@@ -99,6 +99,13 @@
 
 /* Identifiers ------------------------------------------------------------------- */
 
+
+/* Trick to work on floorp sidebar */
+#appcontent,
+#browser {
+  background-color: var(--background) !important;
+  color: var(--text-color);
+}
 /* Text selected */
 ::selection {
   background-color: var(--white) !important;
@@ -115,6 +122,9 @@
   tab[selected="true"] > .tab-stack > .tab-background {
     background-color: var(--white) !important;
   }
+  .tab-content::before {
+    background-color: var(--selected);
+}
 
   .close-icon {
     color: var(--foreground) !important;
