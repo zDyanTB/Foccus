@@ -1,12 +1,4 @@
 @import url('../colors.css');
-
-#TabsToolbar,
-#tabbrowser-tabbox,
-#tabbrowser-tabpanels {
-  background-color: var(--color0) !important;
-  color: var(--text-color);
-}
-
 /* Pinned tab */
 #TabsToolbar #tabbrowser-tabs .tabbrowser-tab:is([pinned]) .tab-background:not([selected]) {
     background-color: transparent !important;
@@ -43,12 +35,7 @@ tab,
     border-bottom: 1px solid transparent;
 }
 
-tab:not([selected="true"]) > .tab-stack:hover > .tab-background {
-    background: rgba(255,255,255,.1) !important;
-}
-
 /* Close button tricks */
-
 tab:not([selected="true"]) .tab-stack .tab-close-button {
   opacity: 0 !important;
   transition: opacity 0.4s ease !important;
@@ -60,23 +47,8 @@ tab:not([selected="true"]) > .tab-stack:hover .tab-close-button {
 
 }
 
-.close-icon {
-  color: var(--foreground) !important;
-  fill: var(--color3) !important;
-}
-
 tab:not([selected]) .tab-icon-image {
     opacity: 0.3 !important;
-}
-
-/* Active tab */
-tab[selected="true"] > .tab-stack > .tab-background {
-  background-color: rgba(255,255,255,.1) !important;
-}
-
-/* Text */
-tab[selected="true"] > .tab-stack .tab-label-container {
-    color: white !important;
 }
 
 /* Line below active tab */
@@ -101,7 +73,6 @@ tab[selected="true"] > .tab-stack .tab-label-container {
 
 }
 
-
 .tabbrowser-tab[selected="true"] .tab-close-button,
 #main-window #tabContextMenu menuseparator,
 #main-window #context_openANewTab {
@@ -124,8 +95,4 @@ tab[selected="true"] > .tab-stack .tab-label-container {
 #TabsToolbar:hover .toolbarbutton-1,
 #TabsToolbar:hover .titlebar-close {
   opacity: 1 !important;
-}
-
-#TabsToolbar .toolbarbutton-icon {
-  stroke: var(--color3) !important;
 }

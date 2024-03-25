@@ -1,3 +1,4 @@
+@import url("variables.css");
 @import url("icons/icons.css");
 @import url("icons/extension-icons.css");
 @import url('colors.css');
@@ -9,28 +10,4 @@
 @import url('components/compact-extensions.css');
 @import url('components/bookmarks.css');
 @import url('components/page-window.css');
-@import url('components/popup.css');
 @import url('components/find-bar.css');
-
-@import url('config.css');
-@import url('variables.css');
-
-/*------------------------------------------------*/
-/* Background Color */
-
-@media (prefers-color-scheme: dark) {
-
-  :root {
-
-    --background-alt:              var(--color2); /* Buttons background */
-    --selected:                    var(--color3); /* Button selected */
-    --bgLow:                       var(--color4); 
-    --inactive:                    var(--color6); 
-    --urgent:                      var(--color1); /* Window activated */
-
-    --text-selected:               var(--background);
-    --text-color:                  var(--foreground);
-    --border-color:                var(--selected);
-  }
-
-}

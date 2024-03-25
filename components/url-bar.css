@@ -63,7 +63,6 @@
 #urlbar #identity-box.notSecureText #identity-icon-box {
   margin-inline-start: initial !important;
   opacity: 1 !important;
-  color: #e36f6f !important;
 }
 
 #urlbar #identity-box.extensionPage #identity-icon-box {
@@ -192,6 +191,7 @@
 #urlbar-zoom-button {
   background-color: transparent !important;
 }
+
 
 #urlbar-zoom-button:hover {
   background-color: rgba(255,255,255,.2) !important;

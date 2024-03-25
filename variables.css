@@ -3,6 +3,7 @@
     --button-fill:              var(--color3);
     --button-hover:             color-mix(in srgb, var(--selected) 20%, transparent);
     --selected:                 var(--color2);
+    --error:                    var(--color7);
     --white:                    rgba(255,255,255,.2);
 
     --text-selected:            var(--background);
@@ -10,6 +11,7 @@
     --border-color:             var(--selected);
 
   
+/* Variables --------------------------------------------------------------- */
   /* Almost every element background  */
   --toolbar-bgcolor: var(--background) !important;
   --toolbar-color: var(--text-color) !important;
@@ -63,15 +65,14 @@
   --button-hover-bgcolor: var(--button-hover) !important;
   --button-bgcolor: var(--button-fill) !important;
 
-
- 
+   
   /* Arrow panel ------------------------------------------------- */
 
   --arrowpanel-background: var(--background) !important;
   --arrowpanel-dimmed: var(--selected) !important; /* hover color */
   --arrowpanel-dimmed-further: red !important; /* hover color */
 
-  --arrowpanel-border-radius: 12px !important;
+  --arrowpanel-border-radius: 14px !important;
   
   /* Text */
   --arrowpanel-color: var(--text-color) !important;
@@ -85,7 +86,56 @@
   /* Bookmark bar -------------------------------------------------- */
 
   --checkbox-border-color: red !important;
+
+  /* Text input field ----------------------------------------------
+  * e.g. bookmarks editor */
+  --focus-outline-color: transparent !important;
+  --input-bgcolor: rgba(0,0,0,0.4) !important;
+  --input-color: var(--text-color) !important;
+  --input-border-color: transparent !important;
+  --error-text-color: var(--error) !important;
+  --input-error-border-color: var(--error) !important;
 }
 
-/* --toolbar-field-focus-color */
-/* --panel-item-hover-bgcolor */
+/* Identifiers ------------------------------------------------------------------- */
+
+/* Text selected */
+::selection {
+  background-color: var(--white) !important;
+  color: var(--button-fill) !important;
+}
+
+/* Tab bar  -------------------------------------------------------------- */
+  /* Hover */
+  tab:not([selected="true"]) > .tab-stack:hover > .tab-background {
+    background: var(--button-hover) !important;
+  }
+
+  /* Active tab */
+  tab[selected="true"] > .tab-stack > .tab-background {
+    background-color: var(--white) !important;
+  }
+
+  .close-icon {
+    color: var(--foreground) !important;
+    fill: var(--color3) !important;
+}
+
+/* Urlbar --------------------------------------------------------------- */
+  /* Icons */
+  #identity-box,
+  #tracking-protection-icon-container,
+  .urlbar-icon {
+    fill: var(--button-fill) !important;
+  }
+
+/* Extensions -------------------------------------------------------------- */
+#unified-extensions-panel .unified-extensions-item:hover {
+  background: var(--button-hover) !important;
+}
+
+/* There's some other item behind these so that I cant change the border-radius the right way */
+#unified-extensions-panel .unified-extensions-item {
+  fill: var(--button-fill) !important;
+  border-radius: 8px !important;
+}
