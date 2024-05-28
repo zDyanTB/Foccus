@@ -1,5 +1,6 @@
-<h1 align="center"> Foocus Floorp </h1>
-<h3 align="center"> My custom theme for <a href="https://floorp.app/en/"> Floorp </a> </h3>
+![Banner](.github/banner.png)
+<h3 align="center"> Foccus </h3>
+<h4 align="center"> A <a href="https://floorp.app/en/"> Floorp </a> theme </h4>
 
 # Features
 - Easily change your color scheme
